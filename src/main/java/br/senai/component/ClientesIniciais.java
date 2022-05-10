@@ -17,18 +17,18 @@ public class ClientesIniciais implements CommandLineRunner {
     private ClienteServiceImpl clienteService;
     @Override
     public void run(String... args) throws Exception {
-        Cliente cliente1 = new Cliente();
-        Cliente cliente2 = new Cliente();
-
-        cliente1.setNome("Thiago");
-        cliente1.setEmail("thiago@gmail.com");
-        cliente1.setCpf("123.456.789-22");
-
-        cliente2.setNome("Eduardo");
-        cliente2.setEmail("eduardo@gmail.com");
-        cliente2.setCpf("987.654.321-22");
-
-        clienteService.save(cliente1);
-        clienteService.save(cliente2);
+//        Cliente cliente1 = new Cliente();
+//        Cliente cliente2 = new Cliente();
+//
+//        cliente1.setNome("Thiago");
+//        cliente1.setEmail("thiago@gmail.com");
+//        cliente1.setCpf("123.456.789-22");
+//
+//        cliente2.setNome("Eduardo");
+//        cliente2.setEmail("eduardo@gmail.com");
+//        cliente2.setCpf("987.654.321-22");
+//
+//        clienteService.save(cliente1);
+//        clienteService.save(cliente2);
     }
 }

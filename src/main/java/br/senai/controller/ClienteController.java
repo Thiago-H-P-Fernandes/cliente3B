@@ -31,15 +31,11 @@ public class ClienteController {
         return "cliente/signin";
     }
 
-//    @GetMapping("/cliente/edit")
-//    public String edit(Model model, @PathVariable("id") long id, Cliente cliente){
-//        Cliente cliente0pt = clienteService.findById(id);
-//        if (cliente0pt.isEmpty()){
-//            throw new IllegalArgumentException("Pessoa Inválida");
-//        }
-//        model.addAttribute("cliente", cliente0pt.get());
-//        return "cliente/edit";
-//    }
+    @GetMapping("/cliente/edit{id}")
+    public String edit(Model model, @PathVariable long id){
+        model.addAttribute("cliente", clienteService.findById(id));
+        return "cliente/edit";
+    }
 
     @PostMapping("/cliente/save")
     public String save(Cliente cliente, Model model) {
