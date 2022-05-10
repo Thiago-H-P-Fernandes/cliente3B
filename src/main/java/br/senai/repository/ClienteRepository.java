@@ -10,6 +10,7 @@ import java.util.List;
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
     // Seleciona apenas as colunas citadas, equivalente ao comando SELECT
+    public Cliente findByNome(String nome);
     public Cliente findByCpf(String cpf);
     public Cliente findByEmail(String email);
     public Cliente findByCpfAndEmail(String cpf, String email);

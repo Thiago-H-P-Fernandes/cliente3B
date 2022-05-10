@@ -7,14 +7,37 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteServiceImpl implements ClienteService{
 
     @Autowired
-    private ClienteRepository clienteRepository;
+    ClienteRepository clienteRepository;
 
-    public List<Cliente> findAll(){
+    @Override
+    public List<Cliente> findAll() {
         return clienteRepository.findAll(Sort.by("nome"));
     }
+
+    @Override
+    public Cliente findById(long id) {
+        return clienteRepository.findById(id).get();
+    }
+
+    @Override
+    public Cliente findByNome(String nome) {
+        return clienteRepository.findByNome(nome);
+    }
+
+    @Override
+    public Cliente save(Cliente cliente) {
+        try {
+            return clienteRepository.save(cliente);
+        } catch (Exception e){
+            throw e;
+        }
+    }
+
+
 }

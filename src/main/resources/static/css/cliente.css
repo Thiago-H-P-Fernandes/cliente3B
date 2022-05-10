@@ -1,27 +1,13 @@
 body{
     margin: 0;
     font-family: Arial;
-    background: url(https://cdn.fs.teachablecdn.com/s3GZoBzcQsie7tTflztG);
+    background: url();
     background-size: cover;
     background-position: sticky;
-
-}
-
-.container{
-    width: 70%;
-    margin-top: 100px;
 }
 
 .col-cpf{
     width: 30%;
-}
-
-.a-edit{
-    width: 20px;
-}
-
-.a-delete{
-    width: 20px ;
 }
 
 img{
@@ -169,3 +155,50 @@ a:hover{
 }
 
 /*-----------------------------*/ 
+
+
+.container{
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 60%;
+}
+
+.container > img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    background-color: chocolate;
+    color: #fff;
+    padding: 16px;
+}
+
+.a-edit{
+    color: forestgreen;
+}
+
+.a-delete{
+    color: crimson;
+}
+
+.a-edit:hover{
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.a-delete:hover{
+    font-weight: bold;
+    color: darkred;
+}
+
+.a-add{
+    color: #fff;
+    text-decoration: none;
+}
+
+.a-add:hover{
+    color: cornsilk;
+    font-weight: bold;
+}
