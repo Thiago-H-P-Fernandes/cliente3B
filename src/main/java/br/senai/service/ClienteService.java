@@ -10,4 +10,6 @@ public interface ClienteService {
 
     public Cliente findById(long id);
     public Cliente findByNome(String nome);
+
+    public void delete(Cliente cliente);
 }

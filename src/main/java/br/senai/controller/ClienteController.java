@@ -37,6 +37,12 @@ public class ClienteController {
         return "cliente/edit";
     }
 
+    @GetMapping("/cliente/delete{id}")
+    public String delete(Model model, @PathVariable long id){
+        clienteService.delete(clienteService.findById(id));
+        return "redirect:./list";
+    }
+
     @PostMapping("/cliente/save")
     public String save(Cliente cliente, Model model) {
         try {
@@ -51,4 +57,6 @@ public class ClienteController {
             return "cliente/signin";
         }
     }
+
+
 }
