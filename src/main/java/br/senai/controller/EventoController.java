@@ -10,7 +10,8 @@ public class EventoController {
     EventoServiceImpl eventoService;
 
     @GetMapping("/evento/list")
-    public String findAll(){
+    public String findAll(Model model){
+        model.addAttribute("eventos", eventoService.findAll());
         return "evento/list";
     }
 }
