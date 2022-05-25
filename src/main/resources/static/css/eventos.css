@@ -25,6 +25,16 @@ img{
     width: 99.5%;
 }
 
+.a-add{
+    color: #fff;
+    text-decoration: none;
+}
+
+.a-add:hover{
+    color: cornsilk;
+    font-weight: bold;
+}
+
 /*-----------------------------*/ 
 
 ul{
