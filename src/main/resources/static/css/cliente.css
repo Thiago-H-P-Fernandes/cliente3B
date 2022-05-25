@@ -175,6 +175,10 @@ footer{
     padding: 16px;
 }
 
+.add-btn{
+    width: 90%;
+}
+
 .a-edit{
     color: forestgreen;
 }
@@ -194,11 +198,14 @@ footer{
 }
 
 .a-add{
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    position: relative;
+    left: 100%;
+    /* justify-content: end; */
 }
 
 .a-add:hover{
-    color: cornsilk;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }

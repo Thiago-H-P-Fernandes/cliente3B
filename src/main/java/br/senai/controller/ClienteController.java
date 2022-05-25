@@ -25,10 +25,10 @@ public class ClienteController {
         return "cliente/list";
     }
 
-    @GetMapping("/cliente/signin")
+    @GetMapping("/cliente/add")
     public String signIn(Model model){
         model.addAttribute("cliente",new Cliente());
-        return "cliente/signin";
+        return "cliente/add";
     }
 
     @GetMapping("/cliente/edit{id}")
@@ -49,12 +49,12 @@ public class ClienteController {
             clienteService.save(cliente);
             model.addAttribute("cliente", cliente);
             model.addAttribute("isSave", true);
-            return "cliente/signin";
+            return "cliente/add";
         } catch (Exception e) {
             model.addAttribute("cliente", cliente);
             model.addAttribute("isError", true);
             model.addAttribute("errorMsg", e.getMessage());
-            return "cliente/signin";
+            return "cliente/add";
         }
     }
 
